@@ -1,0 +1,154 @@
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,legend,input,textarea,p,blockquote,th,td,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+ol,ul,dl,li{list-style:none;}
+body{font-family:PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;color:#000; min-height:100%;padding-bottom:1px;line-height: inherit;}
+a{text-decoration:none;}
+html{height:100%;}
+body{min-height:100%;}
+em{ font-style:normal}
+strong{ font-weight:normal}
+.public_frame{ min-width:320px; margin-bottom:0;_width: 320px;_overflow: hidden; min-height: 100%;}
+.frame_min{max-width: 640px;margin: auto;height: 100%;}
+.public_tit{ border-bottom:1px solid #e2e2e2; overflow:hidden; position:relative;top:0;left:0; z-index:5; background-color:#FFF;}
+.public_tit .public_tit_L{ float:left; color:#999999;}
+.public_tit span{ display:block; position:absolute; width:80%; left:0; right:0; margin:0 auto; color:#333333; text-align:center;}
+.public_tit_R { float:right; color:#555555;}
+.public_div{ position:relative; width:100%;}
+.public_bg{width: 100%;overflow: hidden;position: fixed;top: 0px;bottom: 0;}
+.public_bg p{display: block;max-width: 640px;height: 100%;position: relative;top: 0;left: 0;right: 0;background-color: #f8f8f8;}
+/*--------二次支付-----------*/
+.address_div{ background:url(../images/border_bottom.png) repeat-x left bottom #FFF;padding:15px 10px;}
+.address_div em{ float:left; margin-right:10px;}
+.address_div em img{ width:100%;}
+.address_div_r{ overflow:hidden;}
+.address_div_r span ,.address_div_r p{width:100%; display:block;color:#555;}
+.address_div_r span{ overflow:hidden; margin-bottom:10px;} 
+.address_div_r span font{ float:left}
+.address_div_r span label{ float:right}
+.address_shop{padding:15px; background-color: #FFF;}
+.address_shop_c{padding-bottom:5px;}
+.shop_center{padding:10px; background-color: #f8f8f8;overflow: hidden;}
+.shop_center span{ width:50px; height:50px; display: block; border: 1px solid #cccccc;float: left; margin-right:5px;}
+.shop_center span img{width:100%}
+.shop_text{ overflow: hidden;}
+.shop_text a{color:#555; margin-bottom:5px;display: -webkit-box;-webkit-box-orient: vertical;	-webkit-line-clamp:1;	overflow: hidden;}
+.shop_text p{display: block;width:100%;color:#555;}
+.mode_div{ width: 100%; background-color: #FFF; border-top:1px solid #e8e8e8;}
+.mode_one{margin:0 10px; border-bottom:1px solid #e8e8e8; overflow: hidden }
+.mode_one_title{color:#555; display:block; float:left;padding:10px 0;}
+.mode_one em{display:block; float:right;overflow: hidden;padding:10px 0; }
+.mode_one em font{color:#555;display:block; float:right;}
+.mode_one em strong{display:block; float:right;}
+.no_bor:before{border-top: 0}
+.mode_two{ display:block;padding:10px 5px 10px 15px; border-bottom:1px solid #e8e8e8; overflow: hidden;}
+.mode_two span{display:block;	float: left;color: #333;line-height: 24px;}
+.mode_two p{display:block;	float: right;color: #333; line-height: 24px;}
+.mode_two em{display:block; float: right;color: #c7c7cc; font-size: 20px;}
+.invoice_div{border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; background-color: #FFF}
+.card_div{ margin-top: 5px; background-color: #FFF;}
+.card_div span{display:block;padding:10px; overflow: hidden;	border-bottom:1px solid #e8e8e8;}
+.card_div span em{display:block;float: left;color: #333;}
+.card_div span strong{display:block;float: right;color: #333; font-size:16px;}
+.card_div span .strong_color{color:red;}
+.mony_foot{ position:fixed; left:0; width:100%; bottom:0; background-color:#FFF; overflow:hidden;border-top:1px solid #e8e8e8;}
+.mony_foot span{display: block;float: left; margin-right: 10px; line-height: 24px;color:#333;padding:10px 0; text-align: right}
+.mony_foot span em{color:#ff4f4f; font-size:16px; font-weight:800}
+.mony_foot a{ display: block; overflow: hidden;padding:10px 0; background-color: red; color:#FFF; line-height: 24px; text-align: center;}
+.this_div{padding:10px 15px; overflow: hidden}
+.this_div span{ display: block;float: left;color:#555555; line-height: 26px;}
+.this_div input{ display: block;	float: left;color:#fa342f; text-align: center; width: 80px; margin: 0 5px; line-height: 24px; border:1px solid #cccccc; border-radius: 4px;}
+.this_div a{ display: block;float: left;color:#ff9900; text-decoration:Underline; line-height: 26px;}
+@media screen and (max-width:320px){
+	/*--------二次支付-----------*/
+	.public_tit .public_tit_L{font-size: 20px; margin:10px 0px 10px 5px;}
+	.public_tit span{ font-size:14px; line-height:44px;}
+	.public_tit .public_tit_R{font-size: 20px; margin:10px 5px 10px 0px;}
+	.address_div em{width:18px; margin-top:25px;}
+	.address_div_r span ,.address_div_r p{font-size:12px;}
+	.shop_text a{font-size:14px;}
+	.shop_text p{font-size:12px; margin-bottom: 6px}
+	.mode_one_title{font-size:14px;}
+	.mode_one em font{font-size:14px;}
+	.mode_two span{font-size:14px;}
+	.mode_two p{font-size:12px;}
+	.card_div span em{font-size:14px;}
+	.mony_foot span{ width: 70%;font-size:14px;}
+	.mony_foot a{font-size:14px;}
+	.no_div{ height: 45px;}
+	.ok_zhifu{ font-size:14px;}
+	.size_style{ font-size:12px;}
+	.size_style1{ font-size:14px;}
+	.weui-form-preview__hd .size_style2{ font-size:16px;}
+	.head_photo_div span em{ font-size:12px;}
+}
+@media screen and (min-width:321px) and (max-width:360px){
+	/*--------二次支付-----------*/
+	.public_tit .public_tit_L{font-size: 20px; margin:10px 0px 10px 5px;}
+	.public_tit span{ font-size:14px; line-height:44px;}
+	.public_tit .public_tit_R{font-size: 20px; margin:10px 5px 10px 0px;}
+	.address_div em{width:18px; margin-top:25px;}
+	.address_div_r span ,.address_div_r p{font-size:12px;}
+	.shop_text a{font-size:14px;}
+	.shop_text p{font-size:12px; margin-bottom: 6px}
+	.mode_one_title{font-size:14px;}
+	.mode_one em font{font-size:14px;}
+	.mode_two span{font-size:14px;}
+	.mode_two p{font-size:12px;}
+	.card_div span em{font-size:14px;}
+	.mony_foot span{ width: 70%;font-size:14px;}
+	.mony_foot a{font-size:14px;}
+	.no_div{ height: 45px;}
+	.ok_zhifu{ font-size:14px;}
+	.size_style{ font-size:12px;}
+	.size_style1{ font-size:14px;}
+	.weui-form-preview__hd .size_style2{ font-size:16px;}
+	.head_photo_div span em{ font-size:12px;}
+}
+@media screen and (min-width:361px) and (max-width:480px){
+	/*--------二次支付-----------*/
+	.public_tit .public_tit_L{font-size:26px; margin:5px 0px 5px 5px;}
+	.public_tit span{ font-size:16px; line-height:43px;}
+	.public_tit .public_tit_R{font-size: 26px; margin:6px 5px 6px 0px;}
+	.address_div em{width:20px; margin-top:20px;}
+	.address_div_r span ,.address_div_r p{font-size:16px;}
+	.shop_text a{font-size:16px;}
+	.shop_text p{font-size:14px; margin-bottom: 6px}
+	.mode_one_title{font-size:16px;}
+	.mode_one em font{font-size:16px;}
+	.mode_two span{font-size:16px;}
+	.mode_two p{font-size:14px;}
+	.card_div span em{font-size:16px;}
+	.mony_foot span{ width: 70%;font-size:16px;}
+	.mony_foot a{font-size:16px;}
+	.no_div{ height: 45px;}
+	.ok_zhifu{ font-size:16px;}
+	.size_style{ font-size:14px;}
+	.size_style1{ font-size:16px;}
+	.weui-form-preview__hd .size_style2{ font-size:18px;}
+	.head_photo_div span em{ font-size:14px;}
+}
+@media screen and (min-width:481px){
+	/*--------二次支付-----------*/
+	.public_tit .public_tit_L{font-size:26px; margin:5px 0px 5px 5px;}
+	.public_tit span{ font-size:16px; line-height:43px;}
+	.public_tit .public_tit_R{font-size: 26px; margin:6px 5px 6px 0px;}
+	.address_div em{width:20px; margin-top:20px;}
+	.address_div_r span ,.address_div_r p{font-size:14px;}
+	.shop_text a{font-size:16px;}
+	.shop_text p{font-size:14px; margin-bottom: 6px}
+	.mode_one_title{font-size:16px;}
+	.mode_one em font{font-size:16px;}
+	.mode_two span{font-size:16px;}
+	.mode_two p{font-size:14px;}
+	.card_div span em{font-size:16px;}
+	.card_div span strong{font-size:16px;}
+	.mony_foot span{ width: 70%;font-size:16px;}
+	.mony_foot a{font-size:16px;}
+	.no_div{ height: 45px;}
+	.ok_zhifu{ font-size:16px;}
+	.size_style{ font-size:14px;}
+	.size_style1{ font-size:16px;}
+	.weui-form-preview__hd .size_style2{ font-size:18px;}
+	.head_photo_div span em{ font-size:14px;}
+}

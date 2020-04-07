@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>生鲜商场后台管理系统</title>
+	
+	<!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon--> 
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon--> 
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+	
+	<!-- Styles -->
+    <link href="assets/fontAwesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/nixon.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="login/js/jQuery1.7.js"></script>
+	<script type="text/javascript" src="login/js/jquery-1.8.2.min.js"></script>
+
+    <script type="text/javascript">
+		function loadimage3() {
+			document.getElementById("randImage3").src = "image.jsp?"
+					+ Math.random();
+		}
+	</script>
+    <script type="text/javascript">
+	    function loginAdmin(){
+        	var adminuser_username = document.getElementById("adminuser_username3").value;//获取登录教务名称
+        	var adminuser_password = document.getElementById("adminuser_password3").value;//获取登录用户密码
+        	var imageCode = document.getElementById("imageCode3").value;//获取登录验证码
+
+            if (adminuser_username == "" || adminuser_username == null) {
+            	document.getElementById("login-message3").style.display = 'block';
+            	document.getElementById("login-message-content3").innerText = "管理员名称不能为空";
+            } else if (adminuser_password == "" || adminuser_password == null) {
+            	document.getElementById("login-message3").style.display = 'block';
+            	document.getElementById("login-message-content3").innerText = "密码不能为空";
+            } else if (imageCode == "" || imageCode == null) {
+            	document.getElementById("login-message3").style.display = 'block';
+            	document.getElementById("login-message-content3").innerText = "验证码不能为空";
+            } else {
+            	document.getElementById("login-message3").style.display = 'none';
+            	$.post(
+						"loginAdmin",
+						{
+							adminuser_username : adminuser_username,
+							adminuser_password : adminuser_password,
+							imageCode : imageCode
+						},
+						function(result) {
+							var result = eval('(' + result + ')');
+							if (result.result=="failone") {
+								document.getElementById("login-message3").style.display = 'block';
+								document.getElementById("login-message-content3").innerText = result.message;
+								flag = false;
+							} else if (result.result=="failtwo") {
+								document.getElementById("login-message3").style.display = 'block';
+								document.getElementById("login-message-content3").innerText = result.message;
+								flag = false;
+							} else if (result.result=="failthree") {
+								document.getElementById("login-message3").style.display = 'block';
+								document.getElementById("login-message-content3").innerText = result.message;
+								flag = false;
+							} else if (result.result=="failfour") {
+								document.getElementById("login-message3").style.display = 'block';
+								document.getElementById("login-message-content3").innerText = result.message;
+								flag = false;
+							} else if (result.result=="success") {//登录成功
+								document.getElementById("login-message3").style.display = 'block';
+								document.getElementById("login-message-content3").innerText = result.message;
+								window.location.href = "main";
+								flag = true;
+							}
+				      });
+            }
+            return false;
+	    }
+    </script>
+</head>
+
+<body class="bg-primary">
+
+	<div class="Nixon-login">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<div class="login-content">
+						<div class="login-logo">
+							<a href="index.html"><span>生鲜商场后台管理系统</span></a>
+						</div>
+						<div class="login-form">
+							<h4>管理员登录</h4>
+							<div id="login-message3" style="display:none;" align="center">
+								<p>
+									<span id="login-message-content3" style="color:red;"></span>
+								</p>
+							</div>
+							<form id="login-form-adminuser">
+								<div class="form-group">
+									<label>管理名称</label>
+									<input type="text" class="form-control" id="adminuser_username3" name="adminuser_username3" value="" placeholder="输入管理员名称"/>
+								</div>
+								<div class="form-group">
+									<label>密&nbsp;&nbsp;&nbsp;码</label>
+									<input type="password" class="form-control" id="adminuser_password3" name="adminuser_password3" value="" placeholder="输入密码"/>
+								</div>
+								<div class="form-group">
+									<label>验证码</label>
+									<br>
+									<div style="float: left;">
+										<input class="form-control" style="width:370px;" type="text" id="imageCode3" name="imageCode3" value="" placeholder="输入验证码"/>
+									</div>
+									<div style="float: left;">
+										<img onclick="javascript:loadimage3();" src="image.jsp" id="randImage3" name="randImage3" style="width:120px;height:42px;" title="点击更换" alt="验证码占位图" />
+									</div>
+								</div>
+								<button type="button" onclick="loginAdmin();" class="btn btn-primary btn-flat m-b-30 m-t-30">用户登录</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

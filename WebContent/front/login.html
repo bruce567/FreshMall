@@ -1,0 +1,158 @@
+<html class="pixel-ratio-1">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用户登录页面</title>
+
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,target-densitydpi=medium">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link type="text/css" rel="stylesheet" href="css/wap/base.css">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta content="true" name="HandheldFriendly">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="standard" name="layoutmode">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="webkit" name="renderer">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ,target-densitydpi=medium, viewport-fit=cover" name="viewport" id="viewport">
+<meta name="applicable-device" content="mobile">
+
+<script type="text/javascript">
+        var user_name = "zmnew380";
+    var aGlobalBannerHeight = {};
+    var is_bianji       = parseInt("0");
+    var wap_zz_userid   = "";
+    var wap_is_app      = parseInt("0");
+    var wap_is_ios      = parseInt("0");
+    var wap_userid      = "1946715";
+    var css_channel_id  = '0';
+    var channel_type  = parseInt('');
+    var APP_V           = '0';
+    var AGENT_ID        = '';
+    var IS_NEWS_ARTICEL        = parseInt('0');
+    var LANGUAGE_TYPE        = parseInt('0');
+    var is_wap_view     = parseInt(0);
+    var show_check     = parseInt(0);
+            var use_wxchat_map = 0;
+    </script>
+<script type="text/javascript" src="Language/Zh-cn/Language.js"></script>
+<script type="text/javascript" src="plugins/public/js/cookies.js"></script>
+<script src="plugins/public/js/jquery-1.7.1.min.js"></script>
+<link type="text/css" rel="stylesheet" href="plugins/wap/swiper/swiper-4.3.3.min.css">
+<script src="plugins/wap/swiper/swiper-4.3.3.min.js"></script>
+<script type="text/javascript" src="plugins/wap/js/swipe.min.js"></script>
+<link type="text/css" rel="stylesheet" href="plugins/public/js/slidingVerification/sliding_verification_style.css">
+<script type="text/javascript" src="plugins/public/js/slidingVerification/sliding_tn_code.js"></script>
+<script type="text/javascript" src="js/wap/ajax_info.js"></script>
+<script src="js/md5.js"></script>
+<script type="text/javascript" src="js/wap/public.js"></script>
+<link type="text/css" rel="stylesheet" href="css/wap/web_frame.css">
+<link type="text/css" rel="stylesheet" href="css/wap/wxShareAlert.css">
+<link type="text/css" rel="stylesheet" id="webSkinCss" href="templates/wapother11/css/webskin.css">
+<link type="text/css" rel="stylesheet" href="templates/wapother11/skin_11/style.css">
+<!--change_top_tpl-->
+<script type="text/javascript" src="js/wap/new_wap_public.js"></script>
+<link type="text/css" rel="stylesheet" href="css/wap/new/index.css">
+<script type="text/javascript" src="js/wap/wapShare.js"></script>
+<script type="text/javascript" src="js/wap/doc_json.js"></script>
+<link type="text/css" rel="stylesheet" href="css/wap/icomoon_style.css">
+<!-- 图标文字 -->
+<link rel="stylesheet" type="text/css" href="css/tubiao/iconfont.css">
+<link rel="stylesheet" type="text/css" href="css/tubiao/iconfontNew.css">
+<!-- end -->
+<link type="text/css" rel="stylesheet" href="images/wap/web_style/base_module_style.min.css">
+<link type="text/css" rel="stylesheet" href="wap/include/user_define_css.css">
+<link rel="stylesheet" type="text/css" href="weiUI/css/weui.css">
+<link rel="stylesheet" type="text/css" href="weiUI/css/jquery-weui.css">
+<!-- UI拓展插件JS -->
+<script src="weiUI/js/jquery-weui.js"></script>
+<script src="weiUI/js/swiper.min.js"></script>
+<script src="weiUI/js/city-picker.min.js"></script>
+
+<link href="css/wap/login_alert.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+	function loginexamine() {
+		var flag = false;
+		var user_iphone_login = document.getElementById("user_iphone_login").value;//获取登录手机号码
+		var user_password_login = document.getElementById("user_password_login").value;//获取登录密码
+		if (user_iphone_login.length < 1 || user_password_login.length < 1) {
+			alert("用户名或密码不能为空哦！");
+		} else {
+			$.post(
+				"frontlogin",
+				{
+					user_iphone : user_iphone_login,
+					user_password : user_password_login
+				},
+				function(result) {
+					var result = eval('(' + result + ')');
+					if (result.result=="failone") {
+						alert("输入信息有误！");
+						flag = false;
+					} else if (result.result=="success") {
+						//alert("登录成功！");
+						//跳转到首页
+						window.location.href = "mainindex";
+						flag = true;
+					}
+				});
+		}
+		return flag;
+	}
+</script>
+
+<style type="text/css">
+.low{
+text-align:center;
+height:40px;
+margin-top:20px;
+}
+</style>
+
+</head>
+<body style="background: #fff;">
+	<div class="public_frame">
+		<div class="min_frame">
+			<div>
+				<a href="mainindex">
+					<img src="images/Return3.png" width="30px" height="20px" style="margin-left:10px">
+				</a> 
+
+			</div>
+			<div class="content" style="margin-bottom: 30px;">
+				<form method="post">
+					<div id="account_login_t">
+						<div class="Head_photo">
+							<span><img src="images/user_photo.png"></span>
+							<p id="login_title" style="font-size:14px">用户登录</p>
+						</div>
+						<div class="border_div1">
+							<input id="user_iphone_login" name="user_iphone" placeholder="请输入账号（即注册的手机号）" style="font-size:16px">
+						</div>
+						<div class="border_div" style="border-bottom: 1px solid #f3f3f3;">
+							<input type="password" id="user_password_login" name="user_password" placeholder="请输入密码" style="font-size:16px">
+						</div>
+						<div class="automatism"></div>
+					
+						<a onclick="loginexamine()" class="button_a this_color" id="loginBut_1" style="font-size:20px;border-radius:10px">立即登录</a>
+						<div class="wei_newL">
+						</div
+					</div>
+					
+					<div class="low">
+					        <p>若是新用户，请先
+							<a href="register.html" style="color:#FF9224;text-decoration:underline;font-size:20px">注册</a></p>
+						</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

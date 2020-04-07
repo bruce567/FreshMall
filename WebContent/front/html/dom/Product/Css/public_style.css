@@ -1,0 +1,68 @@
+/* CSS Document */
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,a,input,dl,dt,dd,img { margin:0; padding:0; font-family:"微软雅黑","宋体",arial,verdana,sans-serif; color:#606060; border:none; font-size: 12px; }
+ol,ul,ol li,ul li { list-style:none; }
+a { text-decoration:none; }
+em,i{ font-style: normal; }
+body{width:auto;background:none;padding:0px;margin:0px; background-color:#FFF;}
+
+/*clearfix*/
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix { zoom:1; }
+
+.fl{float: left;}
+.fr{float: right;}
+/*
+内容字体“微软雅黑”，
+内容文字12号字，
+标题文字14号字，
+input输入框高度20像素，
+输入框背景颜色#F4FCFF，
+输入框提示字体颜色#ccc，
+内容上下间距20像素，
+
+列表页
+输入框颜色#4BA7DB，
+操作内容文字颜色#4BA7DB，
+*/
+.star_color{color:red;}
+.margin_l{ margin-right: 10px; }
+.margin_b{ margin-bottom: 10px;}
+/*---------------------添加页--------------------------*/
+.bg{ width: 960px; margin:0 auto; }
+.public_l,.public_list_l{ width: 160px; float:left; }
+.public_r,.public_list_r{ width: 750px; float:right; }
+/*页面左侧导航*/
+.public_nav_tit{ background:#D5E9F0 url('/dom/Product/Images/public_tit.jpg') no-repeat left center; height: 27px; line-height: 27px; padding-left: 20px; font-size: 14px; }
+.public_l_nav li{ height:28px; line-height: 28px; margin-bottom: 5px; }
+.public_l_nav .cur,.public_l_nav li a:hover{ background: url('/dom/Product/Images/public_nav.png') no-repeat; font-weight: bold; }
+.public_l_nav li a{ color:#108BB8; display: block; padding-left: 20px; }
+/*表单列表*/
+.public_web dd{ position: relative; padding-left: 100px; margin-bottom: 20px; }
+.public_web dd label{ width:100px; position: absolute; left:0; line-height: 20px; }
+.public_web dd select{ height: 22px; margin-top:1px; }
+.public_web dd input { float: left; margin-right: 5px; height: 20px; }
+.public_web dd em{ float: left; line-height: 18px; margin-right: 5px;}
+.public_web dd textarea{ min-height: 80px; max-height: 80px; min-width: 200px; max-width: 200px; }
+.public_web dd .margin_b{ margin-bottom: 10px; }
+.public_web dd .text,.public_web dd select,.public_web dd textarea{ background: #F4FCFF; }
+.public_web dd .text{ border: 1px solid #ccc; padding-left: 5px; }
+.public_tit{ background: #E5E5E5; margin:10px 0 20px; height: 1px; position: relative; }
+.public_tit em{ background: #fff; position: absolute; top:-10px; padding-right:10px; font-size: 14px;}
+.public_btn{ background: url('/dom/Product/Images/public_btn.jpg') no-repeat; width: 100px; height: 27px; line-height: 27px; display: block; text-align: center; color:#fff; }
+/*-----------------------end-------------------------*/
+
+.public_list{}
+.public_list_bg{ background: #D6EAF1; padding:10px;}
+/*---------------------列表页--------------------------*/
+.public_list_search{}
+.public_list_search label,.public_list_search input,.public_list_search a{float:left; margin-right: 10px; height: 26px; line-height: 26px;}
+.public_list_search label{font-size: 14px;}
+.public_list_search a{background: url('/dom/Product/Images/button.png') no-repeat; display: block; width: 73px; color:#fff; text-align: center;}
+.public_list_search .search_text{width:150px;}
+.public_list_search .select_all{margin-left: 10px;}
+.public_list table{ background: #fff; width:100%; border-collapse: collapse;}
+.public_list table tr{ height: 25px; }
+.public_list table tr td{ text-align: center; border: 1px solid #ccc; padding:5px 2px;}
+.public_list table tr td .text_bcolor{ border:1px solid #4BA7DB;}
+.public_list table tr td a{ color:#4BA7DB; margin:0 2px;}
